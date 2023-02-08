@@ -9,7 +9,7 @@ import pdfkit
 
 user_path = os.path.expanduser("~")
 win = Tk()
-win.title('Microsoft Mail & Ship - Personal Shipping Form')
+win.title('Mail & Ship - Shipping Form')
 win.geometry('1100x650')
 win.configure(bg='#F4F3F5')
 
