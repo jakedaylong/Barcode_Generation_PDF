@@ -31,61 +31,61 @@ button_font = font.Font(family='Segoe UI', size='12', weight='bold')
 Label(shipping_frame, bg=label_color, font=section_font, text='Ship From:').grid(row=0, pady=15, padx=5)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Alias').grid(row=1, column=1, padx=5, pady=5)
-alias = Entry(shipping_frame, font=ui_font)
+alias = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 alias.grid(row=1, column=2, padx=5, pady=10)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Name').grid(row=1, column=3, padx=5, pady=5)
-ship_from_name = Entry(shipping_frame, font=ui_font)
+ship_from_name = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 ship_from_name.grid(row=1, column=4, padx=5, pady=10)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Phone').grid(row=1, column=5, padx=5, pady=5)
-ship_from_phone = Entry(shipping_frame, font=ui_font)
+ship_from_phone = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 ship_from_phone.grid(row=1, column=6, padx=5, pady=10)
 
 Label(shipping_frame, bg=label_color, font=section_font, text='Ship To:').grid(row=2, pady=15, padx=5)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Company').grid(row=3, column=1, padx=5, pady=10)
-company_name = Entry(shipping_frame, font=ui_font)
+company_name = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 company_name.grid(row=3,column=2)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Contact Name').grid(row=3, column=3, padx=5, pady=10)
-contact_name = Entry(shipping_frame, font=ui_font)
+contact_name = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 contact_name.grid(row=3, column=4)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Address Line 1').grid(row=4, column=1, padx=5, pady=10)
-address_line1 = Entry(shipping_frame, font=ui_font)
+address_line1 = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 address_line1.grid(row=4, column=2)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Address Line 2').grid(row=4, column=3, padx=5, pady=10)
-address_line2 = Entry(shipping_frame, font=ui_font)
+address_line2 = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 address_line2.grid(row=4, column=4)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Address Line 3').grid(row=5, column=1, padx=5, pady=10)
-address_line3 = Entry(shipping_frame, font=ui_font)
+address_line3 = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 address_line3.grid(row=5, column=2)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='City').grid(row=5, column=3, padx=5, pady=10)
-city = Entry(shipping_frame, font=ui_font)
+city = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 city.grid(row=5, column=4)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Country').grid(row=6, column=1, padx=5, pady=10)
-country = Entry(shipping_frame, font=ui_font)
+country = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 country.grid(row=6, column=2)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='State').grid(row=6, column=3, padx=5, pady=10)
-state = Entry(shipping_frame, font=ui_font)
+state = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 state.grid(row=6, column=4)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Zip Code').grid(row=6, column=5, padx=15, pady=10)
-zip_code = Entry(shipping_frame, font=ui_font)
+zip_code = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 zip_code.grid(row=6, column=6)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Phone').grid(row=7, column=1, padx=5, pady=10)
-phone = Entry(shipping_frame, font=ui_font)
+phone = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 phone.grid(row=7, column=2)
 
 Label(shipping_frame, bg=label_color, font=ui_font, text='Email').grid(row=7, column=3, padx=5, pady=10)
-email = Entry(shipping_frame, font=ui_font)
+email = Entry(shipping_frame, font=ui_font, relief='flat', highlightbackground='grey', highlightthickness=1)
 email.grid(row=7, column=4)
 
 t ='\t'
@@ -145,7 +145,7 @@ def clear_entries():
     phone.delete(0,"end")
     email.delete(0,"end")
 
-button = Button(button_frame, bg='#0078D4', fg='white', font=button_font, text='Generate Barcode', command=lambda:[generate_barcode(), clear_entries()])
+button = Button(button_frame, relief='flat', bg='#0078D4', fg='white', font=button_font, text='Generate Barcode', command=lambda:[generate_barcode(), clear_entries()])
 button.pack(side='top', expand=True, pady=10)
 
 packaged_img=Image.open(user_path+r'\OneDrive - Microsoft\Documents\Barcode_Test\placeholder-logo-1.png').resize((260,123))
