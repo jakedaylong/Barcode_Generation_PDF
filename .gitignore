@@ -8,3 +8,5 @@
 /personal_shipping_form.py
 /personal_shipping_form.*
 /personal_shipping_form.spec
+barcode_functions.py
+*.pyc
